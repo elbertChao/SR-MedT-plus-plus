@@ -1,0 +1,56 @@
+name: medt_env
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  # --- Core System ---
+  - python=3.10
+  - pip
+
+  # CRITICAL FIX: Pinned to 2023.1.0 to prevent "undefined symbol: iJIT_NotifyEvent"
+  - mkl=2023.1.0
+  - mkl-include=2023.1.0
+
+  # --- PyTorch Stack ---
+  # Installed with CUDA 12.1 toolkit (Compatible with 12.4 Driver & RTX 3060)
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.1
+
+  - numpy<2.0 # Pinned to <2.0 to prevent code-breaking API changes
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - pandas
+  - jupyterlab
+  - ipykernel
+  - cython
+
+  # --- Pip Specific ---
+  - pip:
+      - torchinfo
+
+      # Computer Vision
+      - opencv-python
+
+      # Medical Imaging
+      - SimpleITK
+      - medpy
+      - nibabel
+      - pydicom
+      - pynrrd
+
+      # Utilities
+      - tqdm
+      - pillow
+      - pydot
+      - pydotplus
+      - natsort
+      - openpyxl
+      - lxml
+      - joblib
+      - threadpoolctl

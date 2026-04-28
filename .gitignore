@@ -1,0 +1,22 @@
+# Ignore compiled Python files
+*.pyc
+*.pyo
+__pycache__/
+*.cpython-*.pyc
+# Ignore environment files
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+*.bmp
+*.pth
+*.png
+*.csv
+*.xlsx
+*.png
+*.jpg
+*.jpeg

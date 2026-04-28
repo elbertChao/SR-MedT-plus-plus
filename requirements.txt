@@ -1,0 +1,12 @@
+numpy<2.0
+pandas
+scipy
+matplotlib
+tqdm
+Pillow
+
+opencv-python
+
+torch
+torchvision
+torchaudio
